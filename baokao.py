@@ -8,6 +8,8 @@ import aiohttp
 import asyncio
 
 # requests.adapters.DEFAULT_RETRIES = 5  # 增加重连次数
+SFZH = 'xxx'
+ZKZH = 'xxx'
 
 
 async def reg(count):
@@ -15,10 +17,9 @@ async def reg(count):
     # s.keep_alive = False
     # await asyncio.sleep(2)
     url = 'https://zk.sceea.cn/RegExam/switchPage?resourceId=reg'
-    # payload = 'sfzh=511025199111014050&zkzh=013220410213&kslb=1&mainIds=0112&qxname=%u9F99%u6CC9%u9A7F%u533A&xx_bm=0132&courseJson=%5B%7B%22zy_bm%22%3A%20%22W120102%22%2C%22kc_bm%22%3A%20%2202133%22%7D%5D'
     payload = {
-        'sfzh': '511025199111014050',
-        'zkzh': '013220410213',
+        'sfzh': SFZH,
+        'zkzh': ZKZH,
         'kslb': 1,
         'mainIds': '0112',
         'qxname': '龙泉驿区',
