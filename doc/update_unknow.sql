@@ -1,0 +1,14 @@
+update `t_shop` set `unit_id`="f11cbdd8b40d11e9ae10b06ebfd1853e",`unit_name`="快马集团",`name`="北京新兴快马汽车服务有限公司大兴店" where `id`="3e189320be3f4d1e8e444c2e62c52f43";
+update `t_shop` set `unit_id`="f11cbdd8b40d11e9ae10b06ebfd1853e",`unit_name`="快马集团",`name`="北京长安快马汽车服务有限公司欧德宝店" where `id`="766c01e073a44f8b8a26f0df277f8096";
+update `t_shop` set `unit_id`="f11cbdd8b40d11e9ae10b06ebfd1853e",`unit_name`="快马集团",`name`="北京新兴快马汽车服务有限公司四季青店" where `id`="efad7968700743029f7d7e2549662d6c";
+update `t_shop` set `unit_id`="f11cbdd8b40d11e9ae10b06ebfd1853e",`unit_name`="快马集团",`name`="北京新兴快马汽车服务有限公司杜家坎店" where `id`="f070904df7a5414084256cc18c1a145a";
+update `t_shop` set `name`="北京广顺锦隆汽车销售服务有限责任有限公司" where `id`="145f179dfc4f4cd291ffd7678d09c744";
+update `t_shop` set `name`="临汾市天鑫利汽车销售服务有限公司（4s店）" where `id`="5d95fa89f510497faf30393a37a80794";
+update `t_shop` set `state`=-400,`name`="山西千佰意商贸有限公司" where `id`="83bcd7e690fb481d907fc97a91d04ffb";
+update `t_shop` set `name`="合肥鸿粤浩丰汽车销售服务有限公司" where `id`="596faf73619f416996069d79c26c7066";
+update `t_shop` set `name`="淮南市盛瑞汽车销售有限公司" where `id`="6c4e9f8cc90746daa21d720ecd672bc0";
+update `t_shop` set `name`="宿迁市泗洪开元汽车销售有限公司" where `id`="198e1a6167c64642a04c49b6c1e561d4";
+update `t_shop` set `state`=-400,`name`="江苏张家港恒佳新能源销售服务有限公司（比亚迪）" where `id`="b8a6cdbaaab24643bc919479ae42b8d7";
+update `t_shop` set `addr_code`="650100",`name`="海利皓通汽车销售有限公司" where `id`="de1487db302b4a8c9903e425fa1907ef";
+update `t_shop` set `name`="云南万友汽车销售服务有限公司大理分公司" where `id`="e5c2ee58e1774ba0a542af20fa0a80c1";
+update `t_shop` set `name`="云南翔宇汽车销售服务有限公司凯旋利分公司（长安马自达）" where `id`="7a93e5a62eba44b8a93d0fe3b983fc98";
