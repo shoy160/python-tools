@@ -7,6 +7,10 @@ import time
 import aiohttp
 import asyncio
 
+import signal
+import sys
+import traceback
+
 # requests.adapters.DEFAULT_RETRIES = 5  # 增加重连次数
 SFZH = 'xxx'
 ZKZH = 'xxx'
@@ -44,16 +48,30 @@ async def reg(count):
 
 
 async def loop_reg(interval=2):
+    ''' 循环报名
+    '''
     count = 1
     while(True):
-        result = await reg(count)
-        if '已报考' in result:
-            break
-        # 秒
-        await asyncio.sleep(interval)
-        count = count+1
+        try:
+            result = await reg(count)
+            if '已报考' in result:
+                break
+        except:
+            traceback.print_exc()
+        finally:
+            await asyncio.sleep(interval)
+            count = count+1
+
+
+def quit(signum, frame):
+    ''' 退出任务
+    '''
+    print('\033[31m任务已退出\033[0m')
+    sys.exit()
 
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
+    signal.signal(signal.SIGINT, quit)
+    signal.signal(signal.SIGTERM, quit)
     loop.run_until_complete(loop_reg())
