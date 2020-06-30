@@ -37,7 +37,7 @@ async def reg(count):
     }
     # response = s.request('POST', url, data=payload, headers=headers)
     # data = response.text
-    # 秒
+    # 超时时间：秒
     timeout = aiohttp.ClientTimeout(total=60)
     async with aiohttp.ClientSession(timeout=timeout) as session:
         async with session.post(url, headers=headers, data=payload) as response:
