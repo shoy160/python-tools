@@ -13,7 +13,7 @@ def get_connection(ip, port, user, pwd, db):
 
 
 def get_test_conn():
-    return get_connection("101.206.8.33", 30285, "test", "Yz@5cSjvWrB", "db_test")
+    return get_connection("", 3306, "test", "", "db_test")
 
 
 def parse_date(date_str):

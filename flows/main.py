@@ -13,8 +13,8 @@ def get_connection(ip, port, user, pwd, db):
 
 
 def get_zero_data(start_time):
-    db = get_connection("192.168.5.237", 3306,
-                        "user", "Yzworld@!234QWER", "db_flow")
+    db = get_connection("", 3306,
+                        "user", "", "db_flow")
     sql = "SELECT f.fd_id,f.fd_device_id,d.fd_ip,f.fd_port,f.fd_collection_time FROM sys_flow as f left JOIN sys_device as d on d.fd_id=f.fd_device_id WHERE f.fd_collection_time>=%s AND (f.fd_flow_out=0 OR f.fd_flow_in=0)"
     with db.cursor() as cursor:
         cursor.execute(sql, [start_time])
@@ -22,8 +22,8 @@ def get_zero_data(start_time):
 
 
 def update_zero_data(flow_in, flow_out, id):
-    db = get_connection("192.168.5.237", 3306,
-                        "user", "Yzworld@!234QWER", "db_flow")
+    db = get_connection("", 3306,
+                        "user", "", "db_flow")
     sql = "update sys_flow set fd_flow_in=%s,fd_flow_out=%s where fd_id=%s" % (
         flow_in, flow_out, id)
     cursor = db.cursor()
